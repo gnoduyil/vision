@@ -1,27 +1,29 @@
-import './App.css';
-import "7.css/dist/7.css";
 
-import NavBar from './components/NavBar';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import Home from './pages/Home';
 import ImageBase64 from './pages/ImageBase64';
-import MyWindow from './components/MyWindow';
 import AssetSearch from './pages/AssetSearch';
+import ExcalidrawPage from './pages/ExcalidrawPage';
+import AuthConf from './pages/AuthConf';
+import TreeNavigationInstance from './components/TreeNavigation';
+
+
+
 
 function App() {
   return (
     <Router>
-    <div>
-      <NavBar />
-      <Routes>
-        <Route path="/" element={<MyWindow/>} />
-        <Route path="/image-base64" element={<ImageBase64/>} />
-        <Route path="/asset-search" element={<AssetSearch/>} />
+      <div>
+        {/* <NavBar /> */}
+        <TreeNavigationInstance />
+        <Routes>
+          <Route path="/image-base64" element={<ImageBase64 />} />
+          <Route path="/asset-search" element={<AssetSearch />} />
+          <Route path="/excalidraw" element={<ExcalidrawPage />} />
+          <Route path="/tenantAuth" element={<AuthConf />} />
+        </Routes>
+      </div>
+    </Router>
 
-      </Routes>
-    </div>
-  </Router>
-  
   );
 }
 

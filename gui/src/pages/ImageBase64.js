@@ -26,8 +26,8 @@ class ImageBase64 extends Component {
   render() {
     return (
       <div>
-        <div class="title-bar">
-          <div class="title-bar-text">图片base64计算</div>
+        <div className="title-bar">
+          <div className="title-bar-text">图片base64计算</div>
         </div>
         <div>
             <input type="file" accept="image/*" onChange={this.handleImageChange} />

@@ -1,0 +1,44 @@
+/* 使用 :global 包裹，确保全局样式生效 */
+:global {
+  /* 重置一些默认样式，确保一致性 */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: 'Arial', sans-serif;
+  }
+}
+
+/* React 模块样式开始 */
+.searchContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.searchBox {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 800px;
+  outline: none; /* 移除默认的轮廓样式 */
+}
+
+.searchButton {
+  background-color: #4285f4; /* Google搜索按钮的颜色 */
+  color: #fff;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-left: 5px;
+}
+
+/* 悬停效果 */
+.searchButton:hover {
+  background-color: #3c78d8;
+}

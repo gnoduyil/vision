@@ -1,10 +1,11 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import styles from './NavBar.module.css'
 
 function NavBar() {
   return (
     <ul role="menubar" className="can-hover">
-      <li role="menuitem" tabindex="0" aria-haspopup="true">
+      <li role="menuitem" tabIndex="0" aria-haspopup="true">
         编程工具
         <ul role="menu">
           <li role="menuitem">
@@ -15,16 +16,22 @@ function NavBar() {
           </li>
         </ul>
       </li>
-      <li role="menuitem" tabindex="0" aria-haspopup="true">
+      <li role="menuitem" tabIndex="0" aria-haspopup="true">
         资产检索
         <ul role="menu">
           <li role="menuitem"><Link to="/asset-search">资产检索</Link></li>
         </ul>
       </li>
-      <li role="menuitem" tabindex="0" aria-haspopup="true">
+      <li role="menuitem" tabIndex="0" aria-haspopup="true">
+      excalidraw
+        <ul role="menu">
+          <li role="menuitem"><Link to="/excalidraw">excalidraw</Link></li>
+        </ul>
+      </li>
+      <li role="menuitem" tabIndex="0" aria-haspopup="true">
         View
         <ul role="menu">
-          <li role="menuitem" tabindex="0" aria-haspopup="true">
+          <li role="menuitem" tabIndex="0" aria-haspopup="true">
             Zoom
             <ul role="menu">
               <li role="menuitem"><button>Zoom In</button></li>
@@ -34,7 +41,7 @@ function NavBar() {
           <li role="menuitem"><a href="#menubar">Status Bar</a></li>
         </ul>
       </li>
-      <li role="menuitem" tabindex="0" aria-haspopup="true">
+      <li role="menuitem" tabIndex="0" aria-haspopup="true">
         Help
         <ul role="menu">
           <li role="menuitem"><a href="#menubar">View Help</a></li>
